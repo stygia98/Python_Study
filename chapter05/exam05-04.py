@@ -24,15 +24,22 @@ print(sample(lst, 1))
 #   data_list.append(i)
 # print(data_list)
 
-data_list3 = list(range(1, 21))
+# data_list3 = list(range(1, 21))
 # print(list(range(1, 21)), type(list(range(1, 21))))
 
 from random import *
-shuffle(data_list3)
-winlist = sample(data_list3, 4)
-print(winlist)
+data_list1 = list(range(1, 21))
+shuffle(data_list1)
 
+print(data_list1)
 print("-- 당첨자 발표 --")
-print(f"치킨 당첨자 : {winlist[0]}")
+print(f"치킨 당첨자 : [{data_list1[0]}]")
+print(f"커피 당첨자 : {data_list1[1:4]}")
+print("-- 축하합니다 --")
+
+winlist = sample(data_list1, 4)
+print(winlist)
+print("-- 당첨자 발표 --")
+print(f"치킨 당첨자 : [{winlist[0]}]")
 print(f"커피 당첨자 : {winlist[1:4]}")
 print("-- 축하합니다 --")
