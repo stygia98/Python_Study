@@ -15,7 +15,7 @@ Quiz) 표준 체중을 구하는 프로그램을 작성하시오
 """
 print("=====Quiz 시작=====")
 
-height = (float)(input("키(cm) : "))
+height = float(input("키(cm) : "))
 gender = input("성별 (M/F) : ").upper()
 
 def std_weight(height, gender):
