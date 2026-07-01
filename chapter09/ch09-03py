@@ -4,7 +4,9 @@ class Unit:
     self.name = name
     self.hp = hp
     self.speed = speed
-    print(f"[생성]{self.name} / 체력 : {self.hp} / 이동속도 : {self.speed}")
+    print(f"[생성]{self.name} / 체력 : {self.hp}")
+  def move(self, location):
+    print(f"[이동]{self.name} / {location}방향으로 이동 / 이동속도 {self.speed}")
 
 class AttackUnit(Unit):
   def __init__(self, name, hp, speed, damage):
@@ -28,3 +30,11 @@ class FlyableAttackUnit(AttackUnit, Flyable):
   def __init__(self, name, hp, speed, damage, flying_spd):
     AttackUnit.__init__(self, name, hp, speed, damage)
     Flyable.__init__(self, flying_spd)
+  def move(self, location):
+    print(f"[이동]{self.name} / {location}방향으로 이동 / 이동속도 {self.flying_spd}")
+
+interceptor1 = FlyableAttackUnit("요격기1", 300, 0, 80, 200)
+# interceptor1.attack(2)
+# interceptor1.damaged(20)
+# interceptor1.fly(2)
+interceptor1.move(3)
